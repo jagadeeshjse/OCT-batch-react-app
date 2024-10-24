@@ -1,7 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Counter = () => {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log('useeffect will excuteon every render');
+  }, [count]);
+
   console.log(count);
   console.log(setCount);
   const increment = () => {

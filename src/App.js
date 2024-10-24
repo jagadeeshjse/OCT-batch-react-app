@@ -6,6 +6,7 @@ import { hotelData } from './hotelData';
 import Counter from './Counter';
 import ShowData from './ShowData';
 import Form from './Form';
+import ShowImageData from './ShowImageData';
 
 console.log('hotelData', hotelData);
 
@@ -17,7 +18,8 @@ const App = () => {
       })} */}
       {/* <Counter /> */}
       {/* <ShowData /> */}
-      <Form />
+      {/* <Form /> */}
+      <ShowImageData />
     </div>
   );
 };

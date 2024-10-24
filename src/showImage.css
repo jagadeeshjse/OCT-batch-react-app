@@ -1,0 +1,10 @@
+.imgData {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.data {
+    border: 2px solid red;
+    width: 30%;
+}
