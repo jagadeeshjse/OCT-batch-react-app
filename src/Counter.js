@@ -1,31 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { decrement, increment } from './reducer';
 
 const Counter = () => {
-  const [count, setCount] = useState(0);
+  const count = useSelector((state) => state.counter.value);
 
-  useEffect(() => {
-    console.log('useeffect will excuteon every render');
-  }, [count]);
+  const dispatch = useDispatch();
+  //   const [count, setCount] = useState(0);
 
-  console.log(count);
-  console.log(setCount);
-  const increment = () => {
-    setCount(count + 1);
-    console.log('inc');
-  };
+  //   useEffect(() => {
+  //     console.log('useeffect will excuteon every render');
+  //   }, [count]);
 
-  const decrement = () => {
-    if (count > 0) {
-      setCount(count - 1);
-    }
+  //   console.log(count);
+  //   console.log(setCount);
+  //   const increment = () => {
+  //     setCount(count + 1);
+  //     console.log('inc');
+  //   };
 
-    console.log('dec');
-  };
+  //   const decrement = () => {
+  //     if (count > 0) {
+  //       setCount(count - 1);
+  //     }
+
+  //     console.log('dec');
+  //   };
   return (
     <div>
-      <button onClick={decrement}>-</button>
+      <button onClick={dispatch(decrement())}>-</button>
       <span>{count}</span>
-      <button onClick={increment}>+</button>
+      <button onClick={dispatch(increment())}>+</button>
     </div>
   );
 };

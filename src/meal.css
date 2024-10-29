@@ -1,0 +1,14 @@
+.mealData {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    
+}
+
+.meal {
+    border: 3px solid green;
+    width: 30%;
+    border-radius: 10px;
+    padding: 10px;
+}
